@@ -7,25 +7,105 @@
         <meta name="description" content="Product Marketing Manager">
     </head>
     <body>
+      <nav id="main-nav">
+        <ul>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Connect">Connect</a></li>
+        </ul>
+    </nav>
         <h1>Stephanie Mix</h1>
         <section id="About">
             <h2>About</h2>
             <p>Stephanie is (she/her/hers) is a Global Product Marketing Manager at Dentsu with a foundation in Finance and Investment Banking. Her expertise spans integration, strategic operations, consumer insights, digital listening, implementations, data management, and artificial intelligence. </p>
         </section>
         <section id="Experience">
-        <h2>Experience</h2>
-        <ul>
-            <li>Dentsu</li>
-            <li>InMoment</li>
-            <li>Goldman Sachs</li>
-          </ul>
-        </section>
-        <section id="Connect">
-          <h2>Connect</h2>
+          <h2>Experience</h2>
           <ul>
-            <li><a href="https://www.linkedin.com/in/stephaniemix/">Visit my Linkedin</a></li>
-            <li><a href="https://github.com/stephcra123">Visit my Github</a></li>
+            <li>
+              <div class="job-header">
+                <span class="job-title">Global Product Marketing Manager, Dentsu</span>
+                <span class="job-date">January 2025 - Present</span>
+              </div>
+              <div class="job-description">
+                <p>Led the creation and execution of comprehensive GTM strategies for new product marketing initiatives, collaborating cross-functionally with product management, sales, and technical teams to drive successful market adoption. </p>
+                <p>Strategically managed media agency product portfolio, overhauling marketing collateral and repositioning offerings to align with market demands and competitive landscape.</p>
+<p>Spearheaded product launches from concept to execution, developing compelling messaging frameworks and value propositions that resulted in increased customer acquisition and revenue growth. </p>
+<p>Established and implemented comprehensive enablement programs for global sales teams, creating training materials and pitch decks that enhanced technical knowledge and boosted conversion rates. </p>
+<p>Identified market opportunities through in-depth competitive analysis and customer research, translating insights into innovative business proposals that expanded product offerings and opened new revenue streams. </p>
+
+              </div>
+            </li>
+            <li>
+              <div class="job-header">
+                <span class="job-title">Product Marketing Manager,  InMoment </span>
+                <span class="job-date">May 2020 - October 2024</span>
+              </div>
+              <div class="job-description">
+                <p> Defined and spearheaded global go-to-market strategies for new product launches, collaborating with cross-functional teams (Sales, Design, Product, Engineering) to drive successful market entry and adoption. </p>
+                <p> Designed and launched data-driven nurture email campaigns for multiple solutions, leveraging insights to enhance customer engagement and increase conversion rates throughout the customer journey. </p>
+                <p> Managed end-to-end product marketing content strategy, overseeing publication and distribution across key channels in close collaboration with Marketing, Product Enablement, and Product Management teams. </p>
+                <p> Created and maintained impactful sales collateral and enablement tools, partnering with Sales to deliver tailored messaging, training resources, and product demonstrations.</p>
+                <p> Developed a range of engaging content—including whitepapers, demos,  pitch decks, and customer case studies—designed to support demand generation and drive brand credibility.</p>
+                <p> Utilized campaign analytics, customer insights, and A/B testing to refine content strategies, achieving a 7% increase in engagement rates across digital platforms.</p>
+
+              </div>
+            </li>
+            <li>
+              <div class="job-header">
+                <span class="job-title">Technical Product Manager,  InMoment</span>
+                <span class="job-date">Januery 2020 - May 2020</span>
+              </div>
+              <div class="job-description">
+                <p> Defined success criteria for testing, product acceptance, beta testing, and release plans. </p> 
+                <p>Delivered +85 internal and customer training on how to use the product reducing 24% of service requests, 25% faster close rate, and 70% client product engagement. </p> 
+                <p>Created +20 project summaries and product plans for new features having completed 95% of launches. </p> 
+
+              </div>
+            </li>
           </ul>
         </section>
+        <section id="Skills">
+          <h2>Skills</h2>
+          <p>Communication Training, White Papers, Solutions Marketing, Case Studies, Web Conferencing, Artificial Intelligence (AI), Market Research, Business Development,  Product Road Mapping, Go-to-Market Strategy, Storytelling, Pricing Strategy, Content Strategy, Strategic Planning,  Financial Analysis, Microsoft Excel, Business Strategy, Team Leadership, Marketing Strategy, Social Media, Data Analysis, Research, Project Management, Product Design, Product Management, Business Intelligence (BI), Microsoft Power BI, Google Workplace, Product Marketing</p>
+        </section>
+        <section id="Projects">
+          <h2>Projects</h2>
+          <ul>
+              <!-- This will be populated with GitHub projects via API call later -->
+          </ul>
+      </section>
+
+        
+      <section id="Connect">
+        <h2>Connect</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/stephaniemix/" class="linkedin">LinkedIn</a></li>
+          <li><a href="https://github.com/stephcra123" class="github">GitHub</a></li>
+      
+        </ul>
+      </section>
     </body>
     </html>
+    <script>
+      document.querySelectorAll('#main-nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            const yOffset = -70; // Adjust based on navbar height
+            const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            
+            window.scrollTo({
+              top: y,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    </script>
