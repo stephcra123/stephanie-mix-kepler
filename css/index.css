@@ -1,3 +1,4 @@
+/*Initial Code will be Desktop code*/
 body {
   background-color: rgb(19, 4, 186);
   font-family: Georgia, serif;
@@ -51,18 +52,6 @@ body {
 #main-nav a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-@media (max-width: 768px) {
-  #main-nav ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-  }
-  
-  #main-nav a {
-      font-size: 16px;
-      padding: 8px 12px;
-  }
-}
 h1, h2, h3, h4, h5, h6 {
   color: rgb(182, 227, 223);
 }
@@ -84,6 +73,12 @@ h1, h2 {
 h1 {
   font-size: 36px;
   margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 15px;
 }
 
 h2 {
@@ -91,14 +86,6 @@ h2 {
   border-bottom: 2px solid #3498db;
   padding-bottom: 8px;
   margin-bottom: 20px;
-}
-h1 {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-align: center;
-  color: #ffffff;
-  position: relative;
-  padding-bottom: 15px;
 }
 
 h1::after {
@@ -211,4 +198,104 @@ h1::after {
 #Connect a:hover::before {
   opacity: 1;
   margin-right: 12px;
+}
+
+/* adjustments for Mobile Phones 
+Smaller margins
+smaller font sizes
+single column
+*/
+
+@media (max-width: 500px) {
+  body {
+    margin: 4px;
+    padding: 4px;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(10, 2, 100);
+  }
+  #About {
+    text-align: left;
+    padding: 10px;
+  }
+  h2 {
+      font-size: 2px;
+      border-bottom: 1px solid #3498db;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+  }
+  h1::after {
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, #3498db, #9b59b6);
+  }
+  #Experience li {
+    border-radius: 4px;
+  }
+  .job-header {
+    background-color: #2980b9;
+    padding: 10px 15px;
+  }
+  #Connect ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #Connect a {
+    width: 100%;
+    border-radius: 5px;
+    min-width: auto;
+    border: 1px solid #3498db;
+  }
+}
+
+
+/* adjustments for Tablets 
+smaller margins
+font sizes
+
+*/
+@media  (min-width: 500px) and (max-width: 1000px) {
+  body {
+    margin: 10px;
+    background-color: rgb(25, 10, 150);
+  }
+  #About {
+    text-align: left;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+    h1::after {
+      width: 120px;
+      background: linear-gradient(to right, #00ccff, #cc66ff);
+    }
+  h2 {
+      font-size: 20px;
+      border-bottom: 1px solid #3498db;
+      padding-bottom: 6px;
+      margin-bottom: 15px;
+      
+  }
+#Experience ul {
+  gap: 20px;
+}
+#Experience li {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+#Connect a {
+  min-width: 150px;
+  padding: 10px 16px;
+} 
+#Connect a:hover {
+  background-color: #2980b9;
+}
 }
