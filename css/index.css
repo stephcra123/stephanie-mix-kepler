@@ -200,10 +200,7 @@ h1::after {
   margin-right: 12px;
 }
 
-/* adjustments for Mobile Phones 
-Smaller margins
-smaller font sizes
-single column
+/* adjustments for Mobile Phones
 */
 
 @media (max-width: 500px) {
@@ -256,8 +253,6 @@ single column
 
 
 /* adjustments for Tablets 
-smaller margins
-font sizes
 
 */
 @media  (min-width: 500px) and (max-width: 1000px) {
