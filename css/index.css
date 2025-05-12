@@ -63,7 +63,7 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 #About {
-  text-align: center;
+  text-align: left;
 }
 h1, h2 {
   font-weight: bold;
@@ -147,9 +147,34 @@ h1::after {
   line-height: 1.6;
 }
 
-#Skills {
-  min-height: 100px; /* Give some height even when empty */
+#skills {
+  padding: 10px;
+  flex: 0 0 auto;
+}  
+
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
 }
+
+#skills li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #2c3e50;
+  padding: 12px 20px;
+  border: 2px solid #3498db;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  min-width: 180px;
+}
+
 #Projects ul {
  list-style-type: none;
   padding: 0;
