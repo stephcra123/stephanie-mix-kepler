@@ -224,6 +224,135 @@ h1::after {
   opacity: 1;
   margin-right: 12px;
 }
+#Contact {
+  margin-bottom: 40px;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+#messages {
+  margin-bottom: 40px;
+}
+
+.message-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.message-item {
+  background-color: white;
+  border-left: 3px solid #3498db;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.message-item a {
+  color: #3498db;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.message-item span {
+  display: block;
+  margin-top: 5px;
+  color: #333;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+}
+
+
+#footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  margin-top: 40px;
+  border-radius: 8px 8px 0 0;
+}
+
+#footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
 
 /* adjustments for Mobile Phones
 */
@@ -257,6 +386,15 @@ h1::after {
     height: 2px;
     background: linear-gradient(to right, #3498db, #9b59b6);
   }
+  #main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  #main-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+  }
   #Experience li {
     border-radius: 4px;
   }
@@ -274,6 +412,55 @@ h1::after {
     min-width: auto;
     border: 1px solid #3498db;
   }
+  #skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .skill-item {
+    text-align: center;
+    background-color: #1a5276;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  #contact-form {
+    padding: 12px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  .form-group input,
+  .form-group textarea {
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  .form-group {
+    margin-bottom: 16px;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  .message-item {
+    padding: 12px 10px 12px 12px;
+    margin-bottom: 10px;
+  }
+  .remove-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+  #footer {
+    padding: 12px;
+    margin-top: 20px;
+  }
+  #footer {
+    background-color: #1f2c36;
+    font-size: 12px;
+  }
+
 }
 
 
@@ -304,6 +491,15 @@ h1::after {
       margin-bottom: 15px;
       
   }
+  #main-nav {
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  #main-nav a {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 15px;
+  }
 #Experience ul {
   gap: 20px;
 }
@@ -318,4 +514,36 @@ h1::after {
 #Connect a:hover {
   background-color: #2980b9;
 }
+#skills-list {
+  gap: 10px;
+  justify-content: flex-start;
+}
+.skill-item {
+  background-color: #2980b9;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+#contact-form {
+  padding: 15px;
+  max-width: 500px;
+}
+.form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .submit-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .submit-btn {
+    background-color: #2980b9;
+  }
+  #footer {
+    padding: 15px;
+    margin-top: 30px;
+  }
+  #footer {
+    background-color: #2c3e50;
+  }
 }
