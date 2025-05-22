@@ -68,3 +68,28 @@ messageform.addEventListener('submit', function (event) {
   //console.log(messageList)
   event.target.reset ();
 });
+  fetch('https://api.github.com/users/stephcra123/repos')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    return response.json();
+  })
+  .then(data => {
+    const repositories = data;
+    
+      const projectSection = document.getElementById('projects');
+      const projectList = projectSection.querySelector('ul');
+      
+      for (let i = 0; i < repositories.length; i++) {
+        const repository = document.createElement('li');
+        repository.textContent = repositories[i].name;
+        console.log(i)
+        projects.className = 'projects-item'; // Add class for styling
+        projectList.appendChild(repository);
+      }
+      return (repositories)
+  })
+  .catch(error => {
+    console.error('An error occurred:', error);
+  });
